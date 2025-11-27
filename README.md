@@ -1,6 +1,6 @@
 # weather_station
-Stacja pogodowa (temperatura, wilgotność, indeks UV, ciśnienie) z przesyłem na serwer. W przyszłości planowane dodanie modułu pomiaru mm deszczu.
+Weather station (temperature, humidity, UV index, pressure) with data sent to a server. In the future, a rain measurement module (mm) is planned.
 
-Pliki z /arduino trzeba wgrać na płytkę przez ArduinoIde lub PlatformIo, (.ini znajduje się w środku).
+Files in /arduino need to be uploaded to the board via Arduino IDE or PlatformIO (the .ini file is included).
 
-Instrukcja do plików obsługujących dodawanie do bazy są w /web/README.md
+Instructions for the files that handle database insertion are in /web/README.md.
