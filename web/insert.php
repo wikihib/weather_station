@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "weather_station");
+$conn = mysqli_connect("localhost", "root", "", "nazwa bazy");
 
 //cisnienie mi nie dziala za dobrze wiec nie ma null
 $temp = $_POST['temp'] ?? null;
@@ -12,6 +12,7 @@ if ($temp === null || $wilg === null) {
     die("Brak podstawowych danych");
 }
 
+//trzeba dostosowac pod swoja baze
 $sql = "INSERT INTO data (date, temp, press, hum, uv) 
         VALUES (NOW(), $temp, $cisn, $wilg, $uv)";
         
