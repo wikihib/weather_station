@@ -4,3 +4,5 @@ Weather station (temperature, humidity, UV index, pressure) with data sent to a 
 Files in /arduino need to be uploaded to the board via Arduino IDE or PlatformIO (the .ini file is included).
 
 Instructions for the files that handle database insertion are in /web/README.md.
+
+Program zrobiony dla Wojtka
