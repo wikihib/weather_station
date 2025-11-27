@@ -1,0 +1,1 @@
+Pliki z web/ muszą się znajdować w localhost/
