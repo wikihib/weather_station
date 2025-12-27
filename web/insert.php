@@ -1,16 +1,16 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "nazwa bazy");
+$conn = mysqli_connect("localhost", "root", "", "nazwa_bazy");
 
-$temp = $_POST['temp'] ?? null;
-$wilg = $_POST['wilg'] ?? null;
-$uv = $_POST['uv'] ?? null;
-$cisn = $_POST['cisn'] ?? null;
+$temp = $_POST['temp'];
+$wilg = $_POST['wilg'];
+$uv   = $_POST['uv'];
+$cisn = $_POST['cisn'];
 
+$stmt = mysqli_prepare(
+    $conn,
+    "INSERT INTO data (date, temp, press, hum, uv) VALUES (NOW(), ?, ?, ?, ?)"
+);
 
-//trzeba dostosowac pod swoja baze
-$sql = "INSERT INTO data (date, temp, press, hum, uv) 
-        VALUES (NOW(), $temp, $cisn, $wilg, $uv)";
-        
-mysqli_query($conn, $sql);
+mysqli_stmt_bind_param($stmt, "dddd", $temp, $cisn, $wilg, $uv);
+mysqli_stmt_execute($stmt);
 
-echo "OK";
